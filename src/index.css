@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default Aether Theme */
+  --color-primary: #135bec;
+  --color-bg-light: #f6f6f8;
+  --color-bg-dark: #101622;
+  --color-mint: #a7f3d0;
+  --color-lavender: #e0e7ff;
+}
+
+:root[data-theme='cyberpunk'] {
+  --color-primary: #f000ff;
+  --color-bg-light: #e0f2fe;
+  --color-bg-dark: #0a0a1a;
+  --color-mint: #00ffcc;
+  --color-lavender: #ff007f;
+}
+
+:root[data-theme='sunset'] {
+  --color-primary: #ff5e62;
+  --color-bg-light: #fff5eb;
+  --color-bg-dark: #2c1a25;
+  --color-mint: #ff9966;
+  --color-lavender: #ff9a9e;
+}
+
+:root[data-theme='obsidian'] {
+  --color-primary: #8a2be2;
+  --color-bg-light: #e5e5e5;
+  --color-bg-dark: #050505;
+  --color-mint: #39ff14;
+  --color-lavender: #9d00ff;
+}
+
+
+@layer utilities {
+  .glass-morphism {
+    background: rgba(16, 22, 34, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .neon-glow-mint {
+    box-shadow: 0 0 20px rgba(167, 243, 208, 0.15);
+  }
+
+  .neon-glow-lavender {
+    box-shadow: 0 0 20px rgba(224, 231, 255, 0.15);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .timeline-path {
+    background: linear-gradient(90deg, transparent 0%, rgba(19, 91, 236, 0.2) 50%, transparent 100%);
+    filter: blur(8px);
+  }
+
+  .orb-glow-mint {
+    box-shadow: 0 0 20px rgba(170, 240, 209, 0.3);
+  }
+
+  .orb-glow-lavender {
+    box-shadow: 0 0 20px rgba(230, 230, 250, 0.3);
+  }
+
+  .perspective-view {
+    perspective: 1200px;
+  }
+
+  .tilt-container {
+    transform: rotateX(20deg) rotateY(-5deg);
+    transform-style: preserve-3d;
+  }
+
+  .timeline-grid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .apple-liquid-glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.5),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.05),
+      0 4px 6px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .apple-liquid-glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      inset 0 1px 0px rgba(255, 255, 255, 0.15),
+      0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .interactive-edge-glow {
+    box-shadow: inset 0 0 100px 40px rgba(19, 91, 236, 0.2);
+  }
+
+  .dark .interactive-edge-glow {
+    box-shadow: inset 0 0 100px 30px rgba(19, 91, 236, 0.1);
+  }
+}
+
+body {
+  @apply bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden;
+}

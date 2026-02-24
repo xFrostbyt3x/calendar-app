@@ -1,0 +1,1 @@
+I recomend you use this app in 90 persent zoom because of the strange fit settings. If anyone can find the solution to this please contact me at vibhavk.yt@gmail.com or my phone number which is 804 210 6925.
